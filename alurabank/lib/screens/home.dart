@@ -6,14 +6,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.black87,
-        child: Column(
+      body: Column(
           children: [
             Header()
           ],
         ),
-      )
     );
   }
 

@@ -1,17 +1,15 @@
+import 'package:alurabank/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
+  const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromRGBO(103, 99, 234, 1),
-            Color.fromRGBO(155, 105, 254, 1),
-            Color.fromRGBO(195, 107, 255, 1),
-           ],
+          colors: ThemeColors.headerGradient,
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
@@ -22,7 +20,7 @@ class Header extends StatelessWidget {
           bottomRight: Radius.circular(15.0)
         ),
       ),
-      child: const Padding(
+      child: Padding(
         padding: EdgeInsets.only(
             top: 80,
             left: 16,
@@ -36,16 +34,10 @@ class Header extends StatelessWidget {
               children: [
                 Text.rich(
                     TextSpan(
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
                         text: "\$",
                         children: [
                           TextSpan(
-                              style: TextStyle(
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.bodyLarge,
                             text: "1.000"
                           )
                         ]
@@ -53,16 +45,11 @@ class Header extends StatelessWidget {
                 ),
                 Text(
                     "Balanço disponível",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
                 ),
               ],
             ),
             Icon(
                 size: 42,
-                color: Colors.white,
                 Icons.account_circle),
           ],
         ),
