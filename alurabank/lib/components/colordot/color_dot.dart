@@ -1,4 +1,4 @@
-import 'package:alurabank/components/sections/color_dot_model.dart';
+import 'package:alurabank/components/colordot/color_dot_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
