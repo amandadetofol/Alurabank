@@ -5,6 +5,7 @@ ThemeData appTheme = ThemeData(
   primarySwatch: ThemeColors.purple,
   primaryColor: ThemeColors.purple,
   brightness: Brightness.dark,
+  fontFamily: "Raleway",
   textTheme: const TextTheme(
     bodyMedium: TextStyle(fontSize: 16),
     bodyLarge:  TextStyle(fontSize: 28, fontWeight: FontWeight.bold)

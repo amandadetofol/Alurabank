@@ -46,14 +46,20 @@ class AccountActionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: (MediaQuery.of(context).size.width / 3) - 48,
-      height: (MediaQuery.of(context).size.width / 3) - 56,
-      child: Column(
-        children: [
-          IconButton(iconSize: 24, onPressed: () {}, icon: Icon(icon)),
-          Text(title),
-        ],
+    return InkWell(
+      onTap: (){
+        print(title);
+      },
+      child: Ink(
+        width: (MediaQuery.of(context).size.width / 3) - 48,
+        height: (MediaQuery.of(context).size.width / 3) - 56,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(icon),
+            Text(title),
+          ],
+        ),
       ),
     );
   }
